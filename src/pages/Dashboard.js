@@ -56,14 +56,15 @@ function Dashboard(){
     return(
         <>
             <div className="hero min-h-screen">
-				<div className="hero-content text-center glass rounded-lg w-full mt-10">
-                    <div className="w-full mb-5">
+				<div className="hero-content text-center glass rounded-lg flex-col w-96 md:w-full mt-10">
+                    <div>
+                        <Link to={"/"} className="btn btn-primary text-white font-normal uppercase mt-3 md:w-auto mb-3" >
+                            <i className="fa-solid fa-plus"></i> Create More
+                        </Link>
+                    </div>
+                    <div className="w-96 px-3 mb-5 md:w-full md:px-0">
                         <div className="overflow-x-auto">
-                            <div>
-                                <Link to={"/"} className="btn btn-primary text-white font-normal uppercase mt-3 md:w-auto mb-3" >
-                                    <i className="fa-solid fa-plus"></i> Create More
-                                </Link>
-                            </div>
+                            
                             
                             <table className="table table-xs md:table-md">
                                 <thead>

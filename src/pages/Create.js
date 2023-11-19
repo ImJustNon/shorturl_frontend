@@ -46,16 +46,16 @@ function Create(){
     return(
         <>
             <div className="hero min-h-screen">
-				<div className="hero-content text-center glass rounded-2xl w-full">
+				<div className="hero-content text-center glass rounded-2xl w-96 md:w-full">
 					<div className="w-full my-5">
-						<h1 className="text-3xl font-bold mb-2">Time to make your URL-Shorter</h1>
+						<h1 className="font-bold mb-5 text-2xl md:text-3xl">Time to make your URL-Shorter</h1>
 						{/* <p className='text-lg mb-1'>🤑 Have you ever felt like you didn{"'"}t know what to do with your money?  🤑</p>
 						<p className='text-sm mb-5'>Just bring it to me. LOL</p> */}
                         <div className="flex-col">
                             <div>
                                 <input type="text" placeholder="Paste Your Long URL here" className="input input-bordered input-error text-center w-full max-w-lg mr-2" onChange={(event) => handleInput(event)} id='input_url' />
                                 {showCopyBtn ? 
-                                    <button className="btn btn-neutral  text-white font-normal uppercase w-96 mt-3 md:w-28 md:mt-0 md:mr-5" onClick={(e) => handleCopy(e)}>
+                                    <button className="btn btn-neutral  text-white font-normal uppercase w-full mt-3 md:w-28 md:mt-0 md:mr-5" onClick={(e) => handleCopy(e)}>
                                         <i className="fa-solid fa-copy"></i> Copy
                                     </button>   
                                     :
@@ -69,10 +69,10 @@ function Create(){
                                 } */}
                             </div> 
                             <div>
-                                <button className="btn bg-orange-600 btn-error text-white font-normal uppercase mt-3 w-96 md:w-44 md:mr-5" onClick={() => handleCreate()}>
+                                <button className="btn bg-orange-600 btn-error text-white font-normal uppercase mt-3 w-full md:w-44 md:mr-5" onClick={() => handleCreate()}>
                                     <i className="fa-solid fa-link"></i>Shorter
                                 </button>
-                                <Link to={"/dashboard"} className="btn btn-primary text-white font-normal uppercase mt-3 w-96 md:w-auto" >
+                                <Link to={"/dashboard"} className="btn btn-primary text-white font-normal uppercase mt-3 w-full md:w-auto" >
                                     <i className="fa-solid fa-list-ul"></i> Dashboard
 						        </Link>
                             </div>
