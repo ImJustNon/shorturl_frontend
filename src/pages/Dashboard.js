@@ -20,7 +20,22 @@ function Dashboard(){
                 userToken: getLocalToken
             }),
         }).then(response => response.json()).then(response =>{
-            setShortUrlDataList(response.data.results);
+            if(response.status === "SUCCESS"){
+                if(response.data.results.length !== 0){
+                    setShortUrlDataList(response.data.results);
+                }
+                else {
+                    setShortUrlDataList([{
+                        id: "NotFound",
+                        short_url: "NotFound",
+                        use_count: "NotFound",
+                        last_use: "NotFound",
+                        original_url: "NotFound",
+                        create_at: "NotFound",
+                    }]);
+                }
+            }
+            
         });
     }, [refresh]);
 
