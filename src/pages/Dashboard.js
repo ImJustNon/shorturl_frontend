@@ -22,7 +22,8 @@ function Dashboard(){
         }).then(response => response.json()).then(response =>{
             if(response.status === "SUCCESS"){
                 if(response.data.results.length !== 0){
-                    setShortUrlDataList(response.data.results);
+                    const sortNewestToOldest = (response.data.results).sort((a, b) => parseInt(b.id) - parseInt(a.id));
+                    setShortUrlDataList(sortNewestToOldest);
                 }
                 else {
                     setShortUrlDataList([{
